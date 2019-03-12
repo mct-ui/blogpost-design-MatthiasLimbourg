@@ -203,11 +203,25 @@ a:focus {
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    html{}
+
+    h1{
+        font-size: 52px;
+        line-height: 64px;
+    }
+}
+
+
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
+    html{}
 
+    h1{
+        font-size: 58px;
+        line-height: 72px;
+    }
 /*
     Print styles.
     ---
