@@ -1,60 +1,64 @@
-
-@font-face {
-    font-family:"Inter UI";
-    font: 400;
-    src:url("../fonts/Inter-UI-Regular.woff2");
-}
-
-@font-face {
-    font-family:"Inter UI";
-    font-weight: 700;
-    src:url("../fonts/Inter-UI-Bold.woff2");
-}
-
-
-
-@font-face {
-    font-family:"Droid Serif";
-    font-weight: 400;
-    src:url("../fonts/DroidSerif-Regular-webfont.woff");
-}
-
-@font-face {
-    font-family:"Droid Serif";
-    font-weight: 400;
-    src:url("../fonts/DroidSerif-Italic-webfont.woff");
-}
-
-@font-face {
-    font-family:"Droid Serif";
-    font-weight: 700;
-    src:url("../fonts/DroidSerif-Bold-webfont.woff");
-}
-
-@font-face {
-    font-family:"Droid Serif";
-    font-weight: 700;
-    src:url("../fonts/DroidSerif-BoldItalic-webfont.woff");
-}
-
-
 /*
     Elements: Page
     ---
     Default markup for page level elements
 */
+@font-face {
+    font-family: "Inter UI";
+    font-weight: 400;
+    src: url("../fonts/Inter-UI-Regular.woff");
+}
+
+@font-face {
+    font-family: "Inter UI";
+    font-weight: 700;
+    src: url("../fonts/Inter-UI-Bold.woff2");
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 400;
+    src: url("../fonts/DroidSerif-Regular-webfont.woff");
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 400;
+    font-style: italic;
+    src: url("../fonts/DroidSerif-Italic-webfont.woff");
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 700;
+    src: url("../fonts/DroidSerif-Bold-webfont.woff");
+}
+
+@font-face {
+    font-family: "Droid Serif";
+    font-weight: 700;
+    font-style: italic;
+    src: url("../fonts/DroidSerif-BoldItalic-webfont.woff");
+}
+
 html {
     font-size: 16px;
     line-height: 1.5;
+    /*font-family: "Helvetica Neue", Helvetica, arial, sans-serif;*/
     font-family: "Droid Serif", Georgia, serif;
-    color: #5C6366;
-    padding: 48px 24px 24px;
+    color: #5c6366;
+    /*padding: 48px 24px 24px;*/
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
 body {
-    max-width: 42em;
+    /*max-width: 42em;*/
     margin: 0 auto;
 }
 
@@ -64,9 +68,8 @@ body {
  *
  * Customize the background color to match your design.
  */
-
 ::selection {
-    background: #00E6A1;
+    background: #00e6a1;
     color: white;
     text-shadow: none;
 }
@@ -76,7 +79,6 @@ body {
     ---
     Default markup for images to make them responsive
 */
-
 img {
     max-width: 100%;
     vertical-align: top;
@@ -87,9 +89,11 @@ img {
     ---
     Default markup for typographic elements
 */
+*+h2 {
+    margin-top: 48px;
+}
 
-
-h1,h2,h3{
+h1, h2, h3 {
     color: #17181A;
     font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
@@ -98,17 +102,13 @@ h1 {
     font-size: 36px;
     line-height: 40px;
     margin: 0 0 24px;
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
 
 h2 {
     font-size: 23px;
     line-height: 32px;
     margin: 0 0 24px;
-}
-
-*+h2{
-    margin-top: 48px;
 }
 
 h3 {
@@ -173,30 +173,29 @@ hr {
 }
 
 a {
-    color: #00A1E6;
+    color: #00a1e6;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: #00E6A1;
+    color: #00e6a1;
 }
 
 a:hover,
 a:focus {
-    color: #1ABAFF;
+    color: #1abaff;
 }
 
 /* Small devices (landscape phones, 576px and up) */
-
 @media (min-width: 576px) {}
 
 /* Medium devices (tablets, 768px and up) */
-
 @media (min-width: 768px) {
     html {
-        padding: 48px 48px 24px;
+        /*padding: 48px 48px 24px;*/
     }
+
     h1 {
         font-size: 58px;
         line-height: 64px;
@@ -204,39 +203,10 @@ a:focus {
 }
 
 /* Large devices (landscape tablets, desktops, 992px and up) */
-
 @media (min-width: 992px) {}
 
 /* Extra large devices (large desktops, 1200px and up) */
-
 @media (min-width: 1200px) {}
-/*
-Components: Author
-
-*/
-.c-author{
-    display: flex;
-    align-items: center;
-}
-
-.c-author__image{
-    width: 56px;
-    height: 56px;
-    border-radius: 100%;
-    margin-right: 16px;
-}
-
-.c-author__name, .c-author__meta{
-    margin-bottom: 0;
-}
-
-.c-author__meta{
-    font-size: 14px;
-    line-height: 16px;
-    font-family: "Inter UI", "Helvetica Neue;", Helvetica, arial, sans-serif;
-    margin-top: 4px;
-}
-
 
 /*
     Print styles.
@@ -244,8 +214,8 @@ Components: Author
     Inlined to avoid the additional HTTP request:
     http://www.phpied.com/delay-loading-your-print-css/
 */
-
 @media print {
+
     *,
     *:before,
     *:after {
@@ -256,16 +226,20 @@ Components: Author
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
     a,
     a:visited {
         text-decoration: underline;
     }
+
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: " ("attr(href) ")";
     }
+
     abbr[title]:after {
-        content: " (" attr(title) ")";
+        content: " ("attr(title) ")";
     }
+
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
@@ -274,14 +248,17 @@ Components: Author
     a[href^="javascript:"]:after {
         content: "";
     }
+
     pre {
         white-space: pre-wrap !important;
     }
+
     pre,
     blockquote {
         border: 1px solid #999;
         page-break-inside: avoid;
     }
+
     /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
@@ -289,18 +266,115 @@ Components: Author
     thead {
         display: table-header-group;
     }
+
     tr,
     img {
         page-break-inside: avoid;
     }
+
     p,
     h2,
     h3 {
         orphans: 3;
         widows: 3;
     }
+
     h2,
     h3 {
         page-break-after: avoid;
     }
+}
+
+/*
+    Components: Author
+*/
+.c-author {
+    display: flex;
+    align-items: center;
+}
+
+.c-author__image {
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 16px;
+}
+
+.c-author__name, .c-author__meta {
+    margin-bottom: 0;
+}
+
+.c-author__name {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.c-author__meta {
+    font-size: 14px;
+    line-height: 16px;
+    font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+    margin-top: 4px;
+}
+
+/*
+    Components: Article
+*/
+.c-article__header, .c-article__body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.c-article__header {
+    padding: 24px 24px 0;
+}
+
+.c-article__body {
+    padding: 0 24px;
+}
+
+@media (min-width:768px) {
+    .c-article__header {
+        padding: 48px 48px 24px;
+    }
+
+    .c-article__author {
+        padding-bottom: 24px;
+    }
+
+    .c-article__body {
+        padding: 24px 48px;
+    }
+}
+
+@media (min-width:992px) {
+    .c-article__body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .c-article__author {
+        width: 25%;
+        padding-right: 24px;
+    }
+
+    .c-article__content {
+        width: 75%;
+    }
+
+    .c-author {
+        display: block;
+    }
+
+    .c-article__image {
+        margin-bottom: 16px;
+    }
+}
+
+/*
+    Utilities: max-width
+    ---
+    Utility classes to put specific widths onto elements
+*/
+.u-max-width-sm {
+    max-width: 36em;
 }
